@@ -1,0 +1,108 @@
+* {
+    box-sizing: content-box;
+}
+
+@keyframes myAnim {
+	0% {
+		animation-timing-function: ease-in;
+		opacity: 0;
+		transform: translateY(-100%);
+	}
+
+	25%,
+	55%,
+	// 75%,
+
+	100% {
+		animation-timing-function: ease-out;
+		opacity: 1;
+		transform: translateY(0%);
+	}
+}
+
+body {
+    background: url("../images/background/4028065.jpg") center no-repeat;
+    background-size: cover;
+    background-color: var(--color-background);
+
+}
+
+.header {
+    width:100%;
+    margin: 1rem auto;
+    padding:1rem;
+    width: 80vw;
+    min-width: max-content;
+    background-color: rgba(245, 245, 245, 0.84);
+    border-radius: var(--border-radius-xl);
+    filter: drop-shadow(3px 2px 2px rgba(0, 0, 0, 0.219));
+    
+    &__title {
+        font-family: var(--font-family-main);
+        margin: 1rem auto;
+        width: fit-content;
+
+    };
+    &__subtitle {
+        font-family: var(--font-family-alt);
+        font-size: 1.2rem;
+        margin: auto;
+        width: fit-content;
+
+    }
+};
+
+.main {
+    margin: 0 auto;
+    width: 85vw;
+    animation: myAnim 2s ease 0s 1 normal forwards;
+    
+    background-color: rgba(250, 250, 250, 0.804);
+    border-radius: var(--border-radius-lg);
+    backdrop-filter: blur(5px);
+    
+    &__section {
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        border: 2px solid green;
+        padding: 1rem;
+
+        &__form {
+            width: 100%;
+            height: fit-content;
+            
+        };
+    };
+
+    .form__section {
+        border:2px solid yellow;
+
+        &__label, &__field {
+            font-family: var(--font-family-main);
+            font-weight: 600;
+            color: rgba(19, 18, 18, 0.852);
+        };
+
+        // &__label {
+        // };
+
+        &__field {
+            padding: 0.3rem 0 0.2rem;
+            line-height: 1;
+            margin-block: 0em;
+
+        };
+
+        &__radio {
+            font-family: var(--font-family-alt);
+
+        };
+
+        &__input {
+            margin: 0.2rem 0;
+        }
+
+    };
+
+};
