@@ -391,11 +391,10 @@ template {
 body {
   background: url("../images/background/4028065.jpg") center no-repeat;
   background-size: cover;
-  background-color: var(--color-background);
+  height: 100vh;
 }
 
 .header {
-  width: 100%;
   margin: 1rem auto;
   padding: 1rem;
   width: 80vw;
@@ -423,12 +422,14 @@ body {
 }
 
 .main {
-  margin: 0 auto;
+  margin: 0 auto 2rem;
   width: 85vw;
+  height: -webkit-fit-content;
+  height: -moz-fit-content;
+  height: fit-content;
+  padding: 0.5rem;
   -webkit-animation: myAnim 2s ease 0s 1 normal forwards;
           animation: myAnim 2s ease 0s 1 normal forwards;
-  background-color: rgba(250, 250, 250, 0.804);
-  border-radius: var(--border-radius-lg);
   -webkit-backdrop-filter: blur(5px);
           backdrop-filter: blur(5px);
 }
@@ -436,8 +437,9 @@ body {
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
-  border: 2px solid green;
   padding: 1rem;
+  background-color: rgba(250, 250, 250, 0.804);
+  border-radius: var(--border-radius-lg);
 }
 .main__section__form {
   width: 100%;
@@ -445,8 +447,14 @@ body {
   height: -moz-fit-content;
   height: fit-content;
 }
-.main .form__section {
-  border: 2px solid yellow;
+.main .form__section--teacher {
+  padding-top: 1rem;
+}
+.main .form__section--submit {
+  margin: auto;
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
 }
 .main .form__section__label, .main .form__section__field {
   font-family: var(--font-family-main);
@@ -457,10 +465,102 @@ body {
   padding: 0.3rem 0 0.2rem;
   line-height: 1;
   margin-block: 0em;
+  margin: 0.9rem 0 0.2rem;
 }
 .main .form__section__radio {
-  font-family: var(--font-family-alt);
+  font-family: var(--font-family-main);
+  font-weight: 400;
 }
 .main .form__section__input {
   margin: 0.2rem 0;
+}
+.main .form__section__input--text {
+  font-family: var(--font-family-alt);
+  border: 1px solid var(--border-color-translucent);
+  border-radius: var(--border-radius-sm);
+  line-height: 1;
+  padding-left: 5px;
+}
+.main .form__section__input--text::-moz-placeholder {
+  font-family: var(--font-family-alt);
+  color: var(--gray-400);
+}
+.main .form__section__input--text:-ms-input-placeholder {
+  font-family: var(--font-family-alt);
+  color: var(--gray-400);
+}
+.main .form__section__input--text::placeholder {
+  font-family: var(--font-family-alt);
+  color: var(--gray-400);
+}
+.main .form__section__input--radio {
+  padding-left: 2rem;
+}
+
+#submit {
+  font-size: 1rem;
+  font-family: var(--font-family-main);
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+  height: -webkit-fit-content;
+  height: -moz-fit-content;
+  height: fit-content;
+  padding: 0.5rem 0.5rem 0;
+  margin: 1rem auto;
+  justify-content: center;
+  border-width: 1px;
+  color: #777777;
+  border-color: #dcdcdc;
+  font-weight: 700;
+  border-radius: var(--border-radius-main);
+  box-shadow: inset 0px 1px 0px 0px #ffffff;
+  text-shadow: inset 0px 1px 0px #ffffff;
+  background: linear-gradient(#ededed, #dfdfdf);
+}
+#submit:hover {
+  background: linear-gradient(#dfdfdf, #ededed);
+}
+
+.answer {
+  margin: auto;
+}
+.answer__title {
+  font-family: var(--font-family-main);
+  font-size: 2rem;
+  line-height: 1;
+  text-align: center;
+  margin: 2rem auto;
+  padding: 1rem 3rem 0.6rem;
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+  max-width: 90vw;
+  filter: drop-shadow(2px 1px 2px rgba(99, 99, 99, 0.251));
+  min-width: -webkit-max-content;
+  min-width: -moz-max-content;
+  min-width: max-content;
+  background-color: rgba(245, 245, 245, 0.84);
+  border-radius: var(--border-radius-main);
+}
+@media (max-width: 599px) {
+  .answer__title {
+    font-size: 1rem;
+  }
+}
+.answer__section {
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+  margin: 1rem;
+  padding: 1rem 1.3rem;
+  background-color: rgba(250, 250, 250, 0.804);
+  border-radius: var(--border-radius-lg);
+  -webkit-animation: myAnim 2s ease 0s 1 normal forwards;
+          animation: myAnim 2s ease 0s 1 normal forwards;
+  -webkit-backdrop-filter: blur(5px);
+          backdrop-filter: blur(5px);
+}
+.answer__section__text {
+  font-family: var(--font-family-stock);
 }

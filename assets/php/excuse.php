@@ -66,18 +66,19 @@ if (isset($_POST['lastname']) && isset($_POST['firstname']) && isset($_POST['gen
         
     $gender == "male" ? $sex = "son": $sex= "daughter";
 
-    $date = date('l F, \t\h\e  jS  Y');
+    $date = date('l, F \t\h\e  jS  Y');
 
-    echo '<h1>Here is your generated excuse</h1>
-    <p class="date">'.$date.'</p>
-    <p class>Dear Mr/Mrs '.$teacher.',</p>
-    <p>Please, excuse my '.$sex.' '.$lastname.' '.$firstname.' for being absent yesterday considering the following reason:</p>
-    <p>'.$content.'</p><br>
-    <p>Respectfully,</p>';
+    echo '<article class="answer">
+    <h1 class="answer__title">Here is your generated excuse</h1>
+    <section class="answer__section">
+    <p class="answer__section__text answer__section__text--date">'.$date.',</p><br>
+    <p class="answer__section__text answer__section__text--letterhead">Dear Mr/Mrs '.$teacher.',</p><br>
+    <p class="answer__section__text answer__section__text--intro">Please, excuse my '.$sex.' '.$lastname.' '.$firstname.' for being absent yesterday considering the following reason:</p>
+    <p class="answer__section__text answer__section__text--excuse">'.$content.'</p><br>
+    <p class="answer__section__text answer__section__text--polite">Respectfully,</p>
+    </answer>';
 
-} else {
-
-}
+} 
 
 ?>
     

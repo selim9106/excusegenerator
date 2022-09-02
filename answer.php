@@ -19,10 +19,13 @@
 
 <main>
 
-</main>
-
-    <?php
+<?php
     include("./assets/php/excuse.php");
     ?>
+
+
+</main>
+
+   
 </body>
 </html>

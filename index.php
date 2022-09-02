@@ -50,7 +50,7 @@
 
             <section class="form__section form__section--teacher">
 
-                <label class="form__section__label" for="teacher">Teacher&nbsp;: </label>
+                <label class="form__section__label form__section__label--teacher" for="teacher">Teacher&nbsp;: </label>
                 <input class="form__section__input form__section__input--text" type="text" name="teacher" placeholder="Satan" required>
 
             </section>
@@ -67,10 +67,14 @@
                 <input class="form__section__input form__section__input--radio" type="radio"  name="reason" value="other">
                 <label class="form__section__radio" for="other">Other&nbsp;: </label>
                 <input class="form__section__input form__section__input--text" type="text" name="specificreason"></br>
-                <input type="submit" name="submit" value="Submit">
 
             </section>
+
+            <section class="form__section form__section--submit">
+
+                <input type="submit" name="submit" value="Submit" id="submit">
             
+            </section>
         </form>
 
     </section>
